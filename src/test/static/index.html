@@ -1,0 +1,23 @@
+<body>
+<div>
+    <p>URL e.g. http://localhost:8080/servletdemo/servlet1</p>
+    <input id="url" type="text" style="width: 500px">
+    <button onclick="doQuery('GET')">GET!</button>
+    <button onclick="doQuery('POST')">POST!</button>
+    <p>Response</p>
+    <textarea id="textarea" style="width: 500px"></textarea>
+</div>
+<script>
+    function doQuery(method) {
+        var url = document.getElementById("url").value;
+        var request = new XMLHttpRequest();
+        request.open(method, url,true);
+        request.onload = function() {
+            if (request.status >= 200 && request.status < 400) {
+                document.getElementById("textarea").textContent = request.responseText;
+            }
+        };
+        request.send();
+    }
+</script>
+</body>

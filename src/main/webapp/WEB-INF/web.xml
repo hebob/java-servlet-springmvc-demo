@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+
+    <servlet>
+        <servlet-name>servlet1</servlet-name>
+        <servlet-class>info.hebob.servlet.ServletDemo</servlet-class>
+        <init-param>
+            <param-name>spiritAnimal</param-name>
+            <param-value>moose</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet1</servlet-name>
+        <url-pattern>/servlet1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>serlvet2</servlet-name>
+        <servlet-class>info.hebob.servlet.ServletDemo</servlet-class>
+        <init-param>
+            <param-name>spiritAnimal</param-name>
+            <param-value>giraffe</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>serlvet2</servlet-name>
+        <url-pattern>/servlet2</url-pattern>
+    </servlet-mapping>
+</web-app>
